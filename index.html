@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mushtaque Saqui | Gift Hub</title>
+    <title>Mushtaque Saqui | Gift Hub & Ghazal Duel</title>
     <style>
-        /* Modern Reset & Fonts */
         * {
             margin: 0;
             padding: 0;
@@ -15,106 +14,131 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Main Card */
-        .gift-card {
+        .main-card {
             background: #ffffff;
             width: 100%;
-            max-width: 650px;
-            padding: 45px 35px;
+            max-width: 700px;
+            padding: 40px 30px;
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             text-align: center;
-            animation: fadeIn 0.8s ease-out;
+            margin-bottom: 30px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Profile Picture */
         .profile-pic {
-            width: 170px;
-            height: 170px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 6px solid #667eea;
             box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-            margin-bottom: 25px;
-            transition: transform 0.3s ease;
-        }
-        .profile-pic:hover {
-            transform: scale(1.05);
+            margin-bottom: 20px;
         }
 
-        /* Typography */
         h1 {
             color: #2c3e50;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             margin-bottom: 8px;
-            letter-spacing: 1px;
         }
+
         h2 {
             color: #667eea;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 25px;
         }
+
         p {
             color: #555555;
             font-size: 1.05rem;
             line-height: 1.8;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        /* Featured Gifts Placeholder */
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        .gallery-item {
-            width: 80px;
-            height: 80px;
-            background-color: #f0f0f0;
-            border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        /* Button */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #ffffff;
-            padding: 16px 40px;
+            padding: 15px 35px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
             box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-            margin-top: 10px;
+            margin-top: 15px;
         }
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 25px rgba(102, 126, 234, 0.6);
         }
 
-        /* Footer */
+        .ghazal-section {
+            background: #ffffff;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .ghazal-section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .ghazal-section h3 {
+            color: #764ba2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        .ghazal-img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin: 15px auto;
+            display: block;
+        }
+
+        .quote-box {
+            background: #f8f9ff;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .quote-box p {
+            font-style: italic;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
         .footer {
             margin-top: 30px;
             font-size: 0.85rem;
@@ -124,34 +148,56 @@
 </head>
 <body>
 
-    <div class="gift-card">
-        <!-- Your Profile Picture -->
+    <!-- GIFT HUB SECTION -->
+    <div class="main-card">
         <img src="cover.png" alt="Mushtaque Saqui" class="profile-pic">
-        
-        <!-- Your Name and Title -->
         <h1>Mushtaque Saqui</h1>
         <h2>Gift Hub</h2>
-        
-        <!-- Welcome Message -->
         <p>Hello! I'm Mushtaque Saqui. Welcome to my personal Gift Hub.</p>
-        
-        <p>Here, I share curated gift ideas, thoughtful recommendations, and special finds to help you celebrate the people you love. Whether it's a birthday, anniversary, or just a simple thank you, you'll find the perfect inspiration right here.</p>
-        
-        <!-- Featured Gifts Placeholder (Icons) -->
-        <div class="gallery">
-            <div class="gallery-item">🎁</div>
-            <div class="gallery-item">💐</div>
-            <div class="gallery-item">💍</div>
-            <div class="gallery-item">🧸</div>
-        </div>
-
-        <!-- Explore Button -->
+        <p>Here, I share curated gift ideas, thoughtful recommendations, and special finds to help you celebrate the people you love.</p>
         <a href="#" class="btn">Explore My Gift Ideas 🎁</a>
+        <div class="footer">&copy; 2024 Mushtaque Saqui. All rights reserved.</div>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            &copy; 2024 Mushtaque Saqui. All rights reserved.
+    <!-- GHAZAL DUEL SECTION -->
+    <div class="ghazal-section">
+        <h2>The Ghazal Duel</h2>
+        <h3>مشتاق ساقی جواب دیتے ہیں ہمانشی بابرا کو</h3>
+
+        <!-- DESCRIPTION IMAGE -->
+        <img src="description.png" alt="Description" class="ghazal-img">
+        
+        <div class="divider"></div>
+
+        <!-- HIMANSHI'S SHER -->
+        <p><strong>Himanshi Babra's Sher:</strong></p>
+        <img src="himanshi-sher.jpg" alt="Himanshi Babra's Sher" class="ghazal-img">
+
+        <!-- SCANSION 1 -->
+        <img src="scansion-1.jpg" alt="Scansion 1" class="ghazal-img">
+
+        <!-- SCANSION 2 -->
+        <img src="scansion-2.jpg" alt="Scansion 2" class="ghazal-img">
+
+        <div class="divider"></div>
+
+        <!-- MY REPLY -->
+        <p><strong>My Reply:</strong></p>
+        <img src="my-reply.png" alt="My Reply" class="ghazal-img">
+
+        <!-- MY SCANSION 1 -->
+        <img src="my-scansion-1.jpg" alt="My Scansion 1" class="ghazal-img">
+
+        <!-- MY SCANSION 2 -->
+        <img src="my-scansion-2.jpg" alt="My Scansion 2" class="ghazal-img">
+
+        <div class="quote-box">
+            <p><strong>یہ صرف ایک جواب نہیں — یہ دلوں کا ایک سلسلہ ہے۔</strong></p>
+            <p>یہ ایک چیلنج ہے، ایک کھیل ہے، اور ایک محبت بھی۔</p>
+            <p>یہ سلسلہ ابھی جاری ہے…</p>
         </div>
+
+        <div class="footer">&copy; 2024 Mushtaque Saqui. All rights reserved.</div>
     </div>
 
 </body>
