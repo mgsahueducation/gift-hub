@@ -5,96 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mushtaque Saqui | Gift Hub</title>
     <style>
-        /* General Page Styling */
+        /* Modern Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0;
             padding: 20px;
-            box-sizing: border-box;
         }
 
-        /* Main Card Container */
+        /* Main Card */
         .gift-card {
-            background-color: #ffffff;
+            background: #ffffff;
             width: 100%;
-            max-width: 550px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 650px;
+            padding: 45px 35px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             text-align: center;
-            transition: transform 0.3s ease;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        .gift-card:hover {
-            transform: translateY(-5px);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Profile Picture Styling */
+        /* Profile Picture */
         .profile-pic {
             width: 170px;
             height: 170px;
-            border-radius: 50%; /* Makes the image a perfect circle */
+            border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #4A90E2;
-            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+            border: 6px solid #667eea;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
             margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
         }
 
-        /* Text Styling */
+        /* Typography */
         h1 {
             color: #2c3e50;
-            font-size: 2.2rem;
-            margin: 0 0 10px 0;
+            font-size: 2.4rem;
+            margin-bottom: 8px;
             letter-spacing: 1px;
         }
-
         h2 {
-            color: #4A90E2;
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 0 0 20px 0;
+            color: #667eea;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
         }
-
         p {
             color: #555555;
             font-size: 1.05rem;
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 20px;
         }
 
-        /* Button Styling */
+        /* Featured Gifts Placeholder */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .gallery-item {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Button */
         .btn {
             display: inline-block;
-            background-color: #4A90E2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #ffffff;
-            padding: 15px 35px;
+            padding: 16px 40px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
             margin-top: 10px;
         }
-
         .btn:hover {
-            background-color: #357ABD;
-            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.6);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.6);
         }
 
-        /* Footer/Copyright */
+        /* Footer */
         .footer {
             margin-top: 30px;
             font-size: 0.85rem;
-            color: #999;
+            color: #aaa;
         }
     </style>
 </head>
@@ -113,6 +137,14 @@
         
         <p>Here, I share curated gift ideas, thoughtful recommendations, and special finds to help you celebrate the people you love. Whether it's a birthday, anniversary, or just a simple thank you, you'll find the perfect inspiration right here.</p>
         
+        <!-- Featured Gifts Placeholder (Icons) -->
+        <div class="gallery">
+            <div class="gallery-item">🎁</div>
+            <div class="gallery-item">💐</div>
+            <div class="gallery-item">💍</div>
+            <div class="gallery-item">🧸</div>
+        </div>
+
         <!-- Explore Button -->
         <a href="#" class="btn">Explore My Gift Ideas 🎁</a>
 
